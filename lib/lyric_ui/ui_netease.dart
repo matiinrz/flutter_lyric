@@ -23,6 +23,7 @@ class UINetease extends LyricUI {
   TextStyle otherExtTextStyle;
   TextStyle playingMainTextStyle;
   TextStyle otherMainTextStyle;
+  Color highlightColor;
 
   UINetease({
     this.defaultSize = 18,
@@ -39,6 +40,7 @@ class UINetease extends LyricUI {
     required this.playingMainTextStyle,
     required this.otherExtTextStyle,
     required this.playingExtTextStyle,
+    required this.highlightColor,
   });
 
   UINetease.clone(UINetease uiNetease)
@@ -57,10 +59,13 @@ class UINetease extends LyricUI {
           playingMainTextStyle: uiNetease.playingMainTextStyle,
           otherExtTextStyle: uiNetease.otherExtTextStyle,
           playingExtTextStyle: uiNetease.playingExtTextStyle,
+          highlightColor: uiNetease.highlightColor,
         );
 
   @override
   TextStyle getPlayingExtTextStyle() => playingExtTextStyle;
+
+  Color getHighlightColor() => highlightColor;
 
   @override
   TextStyle getOtherExtTextStyle() => otherExtTextStyle;

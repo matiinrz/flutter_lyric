@@ -46,18 +46,20 @@ class LyricsReader extends StatefulWidget {
     this.emptyBuilder,
   }) : ui = lyricUi ??
             UINetease(
-                otherMainTextStyle:
-                    TextStyle(color: Colors.grey[200], fontSize: 16),
-                playingMainTextStyle: TextStyle(
-                  color: Colors.white,
-                  fontSize: 14,
-                ),
-                otherExtTextStyle: TextStyle(
-                  color: Colors.grey[300],
-                  fontSize: 14,
-                ),
-                playingExtTextStyle:
-                    TextStyle(color: Colors.grey[300], fontSize: 14));
+              otherMainTextStyle:
+                  TextStyle(color: Colors.grey[200], fontSize: 16),
+              playingMainTextStyle: TextStyle(
+                color: Colors.white,
+                fontSize: 14,
+              ),
+              otherExtTextStyle: TextStyle(
+                color: Colors.grey[300],
+                fontSize: 14,
+              ),
+              playingExtTextStyle:
+                  TextStyle(color: Colors.grey[300], fontSize: 14),
+              highlightColor: Colors.amber,
+            );
 }
 
 class LyricReaderState extends State<LyricsReader>

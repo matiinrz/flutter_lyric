@@ -9,6 +9,8 @@ abstract class LyricUI {
   ///扩展歌词样式（播放行）
   TextStyle getPlayingExtTextStyle();
 
+  Color getHighlightColor();
+
   ///主歌词样式（其他行）
   TextStyle getOtherMainTextStyle();
 
@@ -62,7 +64,7 @@ abstract class LyricUI {
 
   HighlightDirection getHighlightDirection() => HighlightDirection.LTR;
 
-  Color getLyricHightlightColor() => Colors.amber;
+  Color getLyricHightlightColor() => getHighlightColor();
 
   @override
   String toString() {
