@@ -1,11 +1,11 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_lyric/lyric_ui/lyric_ui.dart';
-import 'package:flutter_lyric/lyric_ui/ui_netease.dart';
-import 'package:flutter_lyric/lyrics_log.dart';
-import 'package:flutter_lyric/lyrics_reader_model.dart';
-import 'package:flutter_lyric/lyrics_reader_paint.dart';
+import 'package:flutter_lyric_custom_ui/lyric_ui/lyric_ui.dart';
+import 'package:flutter_lyric_custom_ui/lyric_ui/ui_netease.dart';
+import 'package:flutter_lyric_custom_ui/lyrics_log.dart';
+import 'package:flutter_lyric_custom_ui/lyrics_reader_model.dart';
+import 'package:flutter_lyric_custom_ui/lyrics_reader_paint.dart';
 
 ///SelectLineBuilder
 ///[int] is select progress
@@ -44,7 +44,20 @@ class LyricsReader extends StatefulWidget {
     this.onTap,
     this.playing,
     this.emptyBuilder,
-  }) : ui = lyricUi ?? UINetease();
+  }) : ui = lyricUi ??
+            UINetease(
+                otherMainTextStyle:
+                    TextStyle(color: Colors.grey[200], fontSize: 16),
+                playingMainTextStyle: TextStyle(
+                  color: Colors.white,
+                  fontSize: 14,
+                ),
+                otherExtTextStyle: TextStyle(
+                  color: Colors.grey[300],
+                  fontSize: 14,
+                ),
+                playingExtTextStyle:
+                    TextStyle(color: Colors.grey[300], fontSize: 14));
 }
 
 class LyricReaderState extends State<LyricsReader>

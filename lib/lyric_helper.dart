@@ -1,5 +1,5 @@
-import 'package:flutter_lyric/lyric_ui/lyric_ui.dart';
-import 'package:flutter_lyric/lyrics_reader_model.dart';
+import 'package:flutter_lyric_custom_ui/lyric_ui/lyric_ui.dart';
+import 'package:flutter_lyric_custom_ui/lyrics_reader_model.dart';
 
 class LyricHelper {
   static double getTotalHeight(

@@ -1,5 +1,9 @@
+import 'dart:ui';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_lyric/lyric_ui/lyric_ui.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter_lyric_custom_ui/lyric_ui/lyric_ui.dart';
 
 ///Sample Netease style
 ///should be extends LyricUI implementation your own UI.
@@ -15,18 +19,27 @@ class UINetease extends LyricUI {
   LyricBaseLine lyricBaseLine;
   bool highlight;
   HighlightDirection highlightDirection;
+  TextStyle playingExtTextStyle;
+  TextStyle otherExtTextStyle;
+  TextStyle playingMainTextStyle;
+  TextStyle otherMainTextStyle;
 
-  UINetease(
-      {this.defaultSize = 18,
-      this.defaultExtSize = 14,
-      this.otherMainSize = 16,
-      this.bias = 0.5,
-      this.lineGap = 25,
-      this.inlineGap = 25,
-      this.lyricAlign = LyricAlign.CENTER,
-      this.lyricBaseLine = LyricBaseLine.CENTER,
-      this.highlight = true,
-      this.highlightDirection = HighlightDirection.LTR});
+  UINetease({
+    this.defaultSize = 18,
+    this.defaultExtSize = 14,
+    this.otherMainSize = 16,
+    this.bias = 0.5,
+    this.lineGap = 25,
+    this.inlineGap = 25,
+    this.lyricAlign = LyricAlign.CENTER,
+    this.lyricBaseLine = LyricBaseLine.CENTER,
+    this.highlight = true,
+    this.highlightDirection = HighlightDirection.LTR,
+    required this.otherMainTextStyle,
+    required this.playingMainTextStyle,
+    required this.otherExtTextStyle,
+    required this.playingExtTextStyle,
+  });
 
   UINetease.clone(UINetease uiNetease)
       : this(
@@ -40,27 +53,23 @@ class UINetease extends LyricUI {
           lyricBaseLine: uiNetease.lyricBaseLine,
           highlight: uiNetease.highlight,
           highlightDirection: uiNetease.highlightDirection,
+          otherMainTextStyle: uiNetease.otherMainTextStyle,
+          playingMainTextStyle: uiNetease.playingMainTextStyle,
+          otherExtTextStyle: uiNetease.otherExtTextStyle,
+          playingExtTextStyle: uiNetease.playingExtTextStyle,
         );
 
   @override
-  TextStyle getPlayingExtTextStyle() =>
-      TextStyle(color: Colors.grey[300], fontSize: defaultExtSize);
+  TextStyle getPlayingExtTextStyle() => playingExtTextStyle;
 
   @override
-  TextStyle getOtherExtTextStyle() => TextStyle(
-        color: Colors.grey[300],
-        fontSize: defaultExtSize,
-      );
+  TextStyle getOtherExtTextStyle() => otherExtTextStyle;
 
   @override
-  TextStyle getOtherMainTextStyle() =>
-      TextStyle(color: Colors.grey[200], fontSize: otherMainSize);
+  TextStyle getOtherMainTextStyle() => otherMainTextStyle;
 
   @override
-  TextStyle getPlayingMainTextStyle() => TextStyle(
-        color: Colors.white,
-        fontSize: defaultSize,
-      );
+  TextStyle getPlayingMainTextStyle() => playingMainTextStyle;
 
   @override
   double getInlineSpace() => inlineGap;

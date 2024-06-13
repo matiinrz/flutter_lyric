@@ -1,7 +1,7 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_lyric/lyric_helper.dart';
-import 'package:flutter_lyric/lyric_ui/lyric_ui.dart';
+import 'package:flutter_lyric_custom_ui/lyric_helper.dart';
+import 'package:flutter_lyric_custom_ui/lyric_ui/lyric_ui.dart';
 
 ///lyric model
 class LyricsReaderModel {

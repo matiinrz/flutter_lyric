@@ -1,4 +1,4 @@
-import 'package:flutter_lyric/lyrics_reader_model.dart';
+import 'package:flutter_lyric_custom_ui/lyrics_reader_model.dart';
 
 ///all parse extends this file
 abstract class LyricsParse {

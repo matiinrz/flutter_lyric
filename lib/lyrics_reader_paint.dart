@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_lyric/lyric_helper.dart';
-import 'package:flutter_lyric/lyric_ui/lyric_ui.dart';
-import 'package:flutter_lyric/lyrics_log.dart';
-import 'package:flutter_lyric/lyrics_reader_model.dart';
+import 'package:flutter_lyric_custom_ui/lyric_helper.dart';
+import 'package:flutter_lyric_custom_ui/lyric_ui/lyric_ui.dart';
+import 'package:flutter_lyric_custom_ui/lyrics_log.dart';
+import 'package:flutter_lyric_custom_ui/lyrics_reader_model.dart';
 
 ///draw lyric reader
 class LyricsReaderPaint extends ChangeNotifier implements CustomPainter {
